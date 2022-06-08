@@ -1,5 +1,7 @@
 # PlantaoApp
 
+Aplicativo para gerenciar as escals dos Juizes Plantonistas no Plantão Local e Plantão REgional
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server

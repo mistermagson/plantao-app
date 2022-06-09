@@ -1,0 +1,16 @@
+<h2>Juizes</h2>
+
+<table class="tabela">
+  <thead>
+  <th>ID</th>
+  <th>Juiz</th>
+  <th>Antiguidade</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let juiz of juizes">
+    <td>{{juiz.id}}</td>
+    <td>{{juiz.nome}}</td>
+    <td>{{juiz.dataAntiguidade}}</td>
+  </tr>
+  </tbody>
+</table>

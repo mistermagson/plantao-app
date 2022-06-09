@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AntiguidadeComponent } from './antiguidade/antiguidade.component';
+import { JuizesComponent } from './juizes/juizes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AntiguidadeComponent,
+    JuizesComponent
   ],
   imports: [
     BrowserModule,

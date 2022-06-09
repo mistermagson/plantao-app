@@ -7,12 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'plantao-app';
+  today = Date();
 
   toggleMenu(){
-    let hamburguer = document.getElementById('nav');
-    hamburguer.classList.toggle('active');
+    let nav = document.getElementById('nav');
+    // @ts-ignore
+    nav.classList.toggle('active');
   }
-
-
-
 }

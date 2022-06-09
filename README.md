@@ -2,6 +2,16 @@
 
 Aplicativo para gerenciar as escals dos Juizes Plantonistas no Plantão Local e Plantão REgional
 
+## TODO
+
+- [ x ] Componente **root** com os links de Navegação
+- [ ] Lista Todos os Magistrados por ordem de antiguidade
+- [ ] Lista Todas as datas Disponiveis para escolha do plantao REGIONAL em um calendário
+- [ ] Lista Todas as datas Disponiveis para escolha do plantao LOCAL em um calendário 
+- [ ] Lista as regionais/Subseções
+- [ ] Lista as Portarias
+- [ ] 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server

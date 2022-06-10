@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AntiguidadeComponent } from './antiguidade/antiguidade.component';
 import { JuizesComponent } from './juizes/juizes.component';
+import { PortariasComponent } from './portarias/portarias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AntiguidadeComponent,
-    JuizesComponent
+    JuizesComponent,
+    PortariasComponent
   ],
   imports: [
     BrowserModule,

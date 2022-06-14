@@ -1,13 +1,13 @@
 <span id="data">{{today |date:'full' }}</span>
 <header class="header">
-    <div class="logo"><a href="#">Plantão APP</a></div>
-    <nav id="nav" class="nav">
+    <a href="#" class="logo">Plantão APP</a>
+    <nav>
       <button id="btn-mobile" (click)="toggleMenu()">Menu
         <span id="hamburguer"></span>
       </button>
-      <ul id="menu" class="menu">
+      <ul class="menu">
         <li><a href="#">Meus Plantões</a></li>
-        <li><a routerLink="portarias"  routerLinkActive="active" ariaCurrentWhenActive="page">Portarias</a></li>
+        <li><a routerLink="portarias" routerLinkActive="active" ariaCurrentWhenActive="page">Portarias</a></li>
         <li><a routerLink="antiguidade"  routerLinkActive="active" ariaCurrentWhenActive="page">Antiguidade</a></li>
         <li><a routerLink="juizes"  routerLinkActive="active" ariaCurrentWhenActive="page">Juizes</a></li>
         <li><a href="#">Sair</a></li>

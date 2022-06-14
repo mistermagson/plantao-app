@@ -1,8 +1,13 @@
+$preto: #1d1e20
+
 body
   margin: 0
   padding: 0
+  list-style: none
+  font-size: 1.2rem
+  font-family: Arial
 a
-  color: black
+  color: white
   text-decoration: none
   font-family: sans-serif
 
@@ -14,26 +19,30 @@ a
   font-weight: bold
 
 .header
-  box-sizing: border-box
-  height: 70px
-  padding: 1rem
   display: flex
-  align-items: center
+  flex-wrap: wrap
   justify-content: space-between
-  background: #e7e7e7
+  align-items: center
+  box-sizing: border-box
+  padding: 20px
+  background: $preto
+
 
 .menu
   display: flex
-  list-style: none
-  gap: .5rem
 
-  a
-    display: block
-    padding: .5rem
+  li
+    margin-left: 20px
+
+    a
+      display: block
+      padding: 10px
+
 
 #data
   border: 1px solid black
   display: block
+
 
 .tabela
   border: 1px solid black
@@ -87,6 +96,7 @@ a
 
   #hamburguer
     display: block
+    color: white
     width: 20px
     border-top: 2px solid
     &::after, &::before

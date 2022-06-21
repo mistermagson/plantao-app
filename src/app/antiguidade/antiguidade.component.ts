@@ -10,6 +10,7 @@ export class AntiguidadeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

@@ -1,0 +1,47 @@
+<h2>Plantões</h2>
+
+<table class="tabela">
+  <thead>
+  <th>ID</th>
+  <th>JuizID</th>
+  <th>Data Plantão</th>
+  <th>Tipo (Local ou Regional)</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let plantao of plantoes">
+    <td>{{plantao.id}}</td>
+    <td>{{plantao.juizId}}</td>
+    <td>{{plantao.dataPlantao}}</td>
+    <td>{{plantao.tipoPlantao}}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+<div [ngSwitch]="view">
+  <mwl-calendar-month-view
+    *ngSwitchCase="'month'"
+    [viewDate]="viewDate"
+    [events]="events"
+    (beforeViewRender)="beforeMonthViewRender($event)"
+    (dayClicked)="dayClicked($event.day)"
+  >
+  </mwl-calendar-month-view>
+  <mwl-calendar-week-view
+    *ngSwitchCase="'week'"
+    [viewDate]="viewDate"
+    [events]="events"
+    (beforeViewRender)="beforeWeekOrDayViewRender($event)"
+    (hourSegmentClicked)="hourSegmentClicked($event.date)"
+  >
+  </mwl-calendar-week-view>
+  <mwl-calendar-day-view
+    *ngSwitchCase="'day'"
+    [viewDate]="viewDate"
+    [events]="events"
+    (beforeViewRender)="beforeWeekOrDayViewRender($event)"
+    (hourSegmentClicked)="hourSegmentClicked($event.date)"
+  >
+  </mwl-calendar-day-view>
+</div>

@@ -1,21 +1,23 @@
 <span id="data">{{today |date:'full' }}</span>
 <header class="header">
     <a href="#" class="logo">Plantão APP</a>
-    <nav>
+    <nav id="nav">
       <button id="btn-mobile" (click)="toggleMenu()">Menu
         <span id="hamburguer"></span>
       </button>
       <ul class="menu">
-        <li><a href="#">Meus Plantões</a></li>
-        <li><a routerLink="portarias" routerLinkActive="active" ariaCurrentWhenActive="page">Portarias</a></li>
-        <li><a routerLink="antiguidade"  routerLinkActive="active" ariaCurrentWhenActive="page">Antiguidade</a></li>
-        <li><a routerLink="juizes"  routerLinkActive="active" ariaCurrentWhenActive="page">Juizes</a></li>
+        <li><a routerLink="plantoes" routerLinkActive="active" >Meus Plantões</a></li>
+        <li><a routerLink="portarias" routerLinkActive="active">Portarias</a></li>
+        <li><a routerLink="antiguidade"  routerLinkActive="active">Antiguidade</a></li>
+        <li><a routerLink="juizes"  routerLinkActive="active" >Juizes</a></li>
         <li><a href="#">Sair</a></li>
       </ul>
     </nav>
 </header>
 
 <router-outlet></router-outlet>
+
+
 
 
 

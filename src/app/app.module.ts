@@ -9,6 +9,7 @@ import { PortariasComponent } from './portarias/portarias.component';
 import { PlantoesComponent } from './plantoes/plantoes.component';
 import {CalendarModule, DateAdapter} from "angular-calendar";
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     AntiguidadeComponent,
     JuizesComponent,
     PortariasComponent,
-    PlantoesComponent
+    PlantoesComponent,
+    LoginComponent
   ],
   imports: [
     //BrowserModule,

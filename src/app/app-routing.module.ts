@@ -4,6 +4,7 @@ import {AntiguidadeComponent} from "./antiguidade/antiguidade.component";
 import {JuizesComponent} from "./juizes/juizes.component";
 import {PortariasComponent} from "./portarias/portarias.component";
 import {PlantoesComponent} from "./plantoes/plantoes.component";
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'plantoes',
     component: PlantoesComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

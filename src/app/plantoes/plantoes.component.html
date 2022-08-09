@@ -17,31 +17,3 @@
   </tbody>
 </table>
 
-
-
-<div [ngSwitch]="view">
-  <mwl-calendar-month-view
-    *ngSwitchCase="'month'"
-    [viewDate]="viewDate"
-    [events]="events"
-    (beforeViewRender)="beforeMonthViewRender($event)"
-    (dayClicked)="dayClicked($event.day)"
-  >
-  </mwl-calendar-month-view>
-  <mwl-calendar-week-view
-    *ngSwitchCase="'week'"
-    [viewDate]="viewDate"
-    [events]="events"
-    (beforeViewRender)="beforeWeekOrDayViewRender($event)"
-    (hourSegmentClicked)="hourSegmentClicked($event.date)"
-  >
-  </mwl-calendar-week-view>
-  <mwl-calendar-day-view
-    *ngSwitchCase="'day'"
-    [viewDate]="viewDate"
-    [events]="events"
-    (beforeViewRender)="beforeWeekOrDayViewRender($event)"
-    (hourSegmentClicked)="hourSegmentClicked($event.date)"
-  >
-  </mwl-calendar-day-view>
-</div>

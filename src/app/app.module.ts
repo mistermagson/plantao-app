@@ -9,7 +9,11 @@ import { PortariasComponent } from './portarias/portarias.component';
 import { PlantoesComponent } from './plantoes/plantoes.component';
 import {CalendarModule, DateAdapter} from "angular-calendar";
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './public/login/login.component';
+import { SecureComponent } from './secure/secure.component';
+import {PublicModule} from "./public/public.module";
+import {SecureModule} from "./secure/secure.module";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -17,18 +21,22 @@ import { LoginComponent } from './login/login.component';
     AntiguidadeComponent,
     JuizesComponent,
     PortariasComponent,
-    PlantoesComponent,
-    LoginComponent
+    PlantoesComponent
+
+
   ],
   imports: [
     //BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    PublicModule,
+    SecureModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
+    RouterModule
   ],
   exports: [AppComponent],
   providers: [],

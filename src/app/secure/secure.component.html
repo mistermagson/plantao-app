@@ -1,0 +1,58 @@
+<div
+  id="main-wrapper"
+  data-layout="vertical"
+  data-navbarbg="skin5"
+  data-sidebartype="full"
+  data-sidebar-position="absolute"
+  data-header-position="absolute"
+  data-boxed-layout="full"
+>
+
+  <app-nav></app-nav>
+
+  <aside class="left-sidebar" data-sidebarbg="skin5">
+
+    <app-menu></app-menu>
+
+  </aside>
+
+  <div class="page-wrapper">
+    <div class="container-fluid">
+
+      <!-- ============================================================== -->
+      <!-- Conteúdo Principal -->
+      <!-- ============================================================== -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-md-flex align-items-center">
+                <div>
+                  <h4 class="card-title">Área de Exibição</h4>
+                  <h5 class="card-subtitle">Conteúdo Principal</h5>
+                </div>
+              </div>
+              <div class="row">
+                <router-outlet></router-outlet>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+
+    <footer class="footer text-center">
+      Desenvolvido pela Justiça Federal de MS
+      <a href="https://www.jfms.jus.br">JFMS</a>.
+    </footer>
+
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Page wrapper  -->
+  <!-- ============================================================== -->
+</div>

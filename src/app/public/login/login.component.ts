@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../../environments/environment";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -14,7 +17,6 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder:FormBuilder,
 
-
   ) {
 
   }
@@ -26,8 +28,9 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  submit():void{
-    console.log(this.form.getRawValue())
+  submit():void {
+    console.log(this.form.getRawValue());
+
   }
 
 }

@@ -13,9 +13,7 @@
         "@schematics/angular:service": {
           "skipTests": true
         },
-        "@schematics/angular:module": {
-
-        },
+        "@schematics/angular:module": {},
         "@schematics/angular:application": {
           "strict": true
         }
@@ -33,31 +31,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/assets/libs/flot/css/float-chart.css",
-              "src/assets/dist/css/style.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
-              "src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "src/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js",
-              "src/assets/extra-libs/sparkline/sparkline.js",
-              "src/assets/libs/flot/excanvas.js",
-              "src/assets/libs/flot/jquery.flot.js",
-              "src/assets/libs/flot/jquery.flot.pie.js",
-              "src/assets/libs/flot/jquery.flot.time.js",
-              "src/assets/libs/flot/jquery.flot.stack.js",
-              "src/assets/libs/flot/jquery.flot.crosshair.js",
-              "src/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js",
-              "src/assets/dist/js/waves.js",
-              "src/assets/dist/js/sidebarmenu.js",
-              "src/assets/dist/js/custom.min.js"
+              "src/assets/js/dashboard.js"
             ]
           },
           "configurations": {
@@ -80,7 +63,21 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              }
             },
             "development": {
               "buildOptimizer": false,
@@ -123,13 +120,25 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-            ],
-            "scripts": [
+            "styles": [],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

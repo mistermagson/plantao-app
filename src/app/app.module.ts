@@ -7,13 +7,10 @@ import { AntiguidadeComponent } from './antiguidade/antiguidade.component';
 import { JuizesComponent } from './juizes/juizes.component';
 import { PortariasComponent } from './portarias/portarias.component';
 import { PlantoesComponent } from './plantoes/plantoes.component';
-import {CalendarModule, DateAdapter} from "angular-calendar";
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-import { LoginComponent } from './public/login/login.component';
-import { SecureComponent } from './secure/secure.component';
 import {PublicModule} from "./public/public.module";
-import {SecureModule} from "./secure/secure.module";
 import {RouterModule} from "@angular/router";
+import {NavComponent} from "./nav/nav.component";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +18,10 @@ import {RouterModule} from "@angular/router";
     AntiguidadeComponent,
     JuizesComponent,
     PortariasComponent,
-    PlantoesComponent
+    PlantoesComponent,
+    NavComponent,
+    HeaderComponent
+
 
 
   ],
@@ -31,11 +31,7 @@ import {RouterModule} from "@angular/router";
     BrowserAnimationsModule,
     AppRoutingModule,
     PublicModule,
-    SecureModule,
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory,
-    }),
+
     RouterModule
   ],
   exports: [AppComponent],

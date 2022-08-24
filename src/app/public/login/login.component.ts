@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {HttpClient} from "@angular/common/http";
 
 
 @Component({
@@ -10,13 +11,9 @@ import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  http: HttpClient;
 
-  constructor(
-    private formBuilder:FormBuilder,
-
-
-  ) {
-
+  constructor(private formBuilder:FormBuilder) {
   }
 
   ngOnInit(): void {
@@ -27,7 +24,10 @@ export class LoginComponent implements OnInit {
   }
 
   submit():void{
+
     console.log(this.form.getRawValue())
+
   }
 
 }
+

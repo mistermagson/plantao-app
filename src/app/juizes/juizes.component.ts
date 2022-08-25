@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { JUIZES } from "../mock-juizes";
+
+import {JuizesService} from "./juizes.service";
+
 
 @Component({
   selector: 'app-juizes',
@@ -8,11 +10,12 @@ import { JUIZES } from "../mock-juizes";
 })
 export class JuizesComponent implements OnInit {
 
-  juizes = JUIZES;
+  juizes: Array<any>;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.juizes = JuizesService.getAll()
   }
 
 }

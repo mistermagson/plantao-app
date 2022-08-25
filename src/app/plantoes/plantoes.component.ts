@@ -12,11 +12,14 @@ export class PlantoesComponent implements OnInit {
 
   plantoes = PLANTOES;
 
+<<<<<<< HEAD
   viewDate: Date = new Date();
 
 
 
 
+=======
+>>>>>>> temp
 
   constructor() {
 

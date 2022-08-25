@@ -5,7 +5,7 @@ Aplicativo para gerenciar as escals dos Juizes Plantonistas no Plantão Local e 
 ## TODO
 
 - [x] Componente **root** com os links de Navegação
-- [x] Lista em um calendário os plantão já marcados FRONTEND
+- [ ] Lista em um calendário os plantão já marcados FRONTEND
 - [ ] Lista Todos os Magistrados por ordem de antiguidade FRONTEND
 - [ ] Lista Todas as datas Disponiveis para escolha do plantao REGIONAL em um calendário
 - [ ] Lista Todas as datas Disponiveis para escolha do plantao LOCAL em um calendário 

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import {JuizesService} from "./juizes.service";
-
+import {Observable} from "rxjs";
+import {Juiz} from "../model/juiz";
 
 @Component({
   selector: 'app-juizes',
@@ -10,12 +11,14 @@ import {JuizesService} from "./juizes.service";
 })
 export class JuizesComponent implements OnInit {
 
-  juizes: Array<any>;
+  juizes: Observable<Juiz[]>;
+  displayedColumns = ['id', 'nome','dataAntiguidade'];
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.juizes = JuizesService.getAll()
+  constructor(private juizesService: JuizesService) {
+    this.juizes = juizesService.lista();
   }
 
+  ngOnInit(): void {
+
+  }
 }

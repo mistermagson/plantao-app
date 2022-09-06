@@ -1,17 +1,29 @@
-<h2>Juizes</h2>
-<div class="table-responsive">
-  <table class="table table-striped table-sm">
-    <thead>
-    <th>ID</th>
-    <th>Juiz</th>
-    <th>Antiguidade</th>
-    </thead>
-    <tbody>
-    <tr *ngFor="let juiz of juizes">
-      <td>{{juiz.id}}</td>
-      <td>{{juiz.nome}}</td>
-      <td>{{juiz.dataAntiguidade}}</td>
-    </tr>
-    </tbody>
+<mat-card>
+  <mat-toolbar color="primary">
+    Juizes
+  </mat-toolbar>
+  <table mat-table [dataSource]="juizes" class="mat-elevation-z8">
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+    </ng-container>
+
+    <!-- Antiguidade Column -->
+    <ng-container matColumnDef="dataAntiguidade">
+      <th mat-header-cell *matHeaderCellDef> Antiguidade </th>
+      <td mat-cell *matCellDef="let element"> {{element.dataAntiguidade}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-</div>
+</mat-card>
+
+

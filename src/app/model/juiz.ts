@@ -1,6 +1,5 @@
-export interface Juiz {
-  id: number;
+export class Juiz{
+  id: string;
   nome: string;
   dataAntiguidade: string;
 }
-

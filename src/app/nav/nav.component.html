@@ -1,54 +1,40 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-  <div class="position-sticky pt-3 sidebar-sticky">
+<mat-toolbar color="primary">
+  <span>Plantão App</span>
+</mat-toolbar>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo right">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li routerLinkActive="active">
+        <a
 
-    <ul class="nav flex-column">
-       <li class="nav-item">
-        <a
-          class="nav-link"
-          routerLink="plantoes" routerLinkActive="active"
-          aria-expanded="false"
-        ><i class="me-2 mdi mdi-calendar-multiple-check"></i
-        ><span class="hide-menu">Meus Plantões</span></a>
+          routerLink="plantoes"
+        >
+          <i class="me-2 mdi mdi-calendar-multiple-check"></i>Meus Plantões</a>
       </li>
-       <li class="nav-item">
-        <a class="nav-link"
-           routerLink="portarias" aria-expanded="false"><i class="me-2 mdi mdi-file-multiple"></i><span
-          class="hide-menu">Portarias</span></a>
-      </li>
-       <li class="nav-item">
+      <li routerLinkActive="active">
         <a
-          class="nav-link"
+          routerLink="portarias"><i class="me-2 mdi mdi-file-multiple"></i>Portarias</a>
+      </li>
+      <li routerLinkActive="active">
+        <a
+
           routerLink="juizes"
-          aria-expanded="false"><i class="me-2 mdi mdi-account-multiple"></i
-        ><span class="hide-menu">Juízes</span></a>
+        ><i class="me-2 mdi mdi-account-multiple"></i>Juízes</a>
       </li>
-       <li class="nav-item">
+      <li routerLinkActive="active">
         <a
-          class="nav-link"
-          routerLink="#"
-          aria-expanded="true"><i class="me-2 mdi mdi-calendar-plus"></i
-        ><span class="hide-menu">Gerenciar Escalas</span></a>
-      </li>
-       <li class="nav-item">
-        <a
-          class="nav-link"
-          routerLink="#"
-          aria-expanded="true"><i class="me-2 mdi mdi-account-edit"></i
-        ><span class="hide-menu">Gerenciar Perfis</span></a>
-      </li>
-       <li class="nav-item">
-        <a
-          class="nav-link"
+
           routerLink="login"
-          aria-expanded="false"><i class="me-2 mdi mdi-login"></i
-        ><span class="hide-menu">Login</span></a>
+        ><i class="me-2 mdi mdi-login"></i
+        >Login</a>
       </li>
-       <li class="nav-item">
+      <li>
         <a
-          class="nav-link"
+
           routerLink="/"
-          aria-expanded="false"><i class="me-2 mdi mdi-logout"></i
-        ><span class="hide-menu">Logout</span></a>
+        ><i class="me-2 mdi mdi-logout"></i
+        >Logout</a>
       </li>
 
     </ul>

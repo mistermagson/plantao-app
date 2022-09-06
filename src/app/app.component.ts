@@ -9,9 +9,4 @@ export class AppComponent {
   title = 'plantao-app';
   today = Date();
 
-  toggleMenu(){
-    let nav = document.getElementById('nav');
-    // @ts-ignore
-    nav.classList.toggle('active');
-  }
 }

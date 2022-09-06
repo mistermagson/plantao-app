@@ -1,5 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy,  ViewEncapsulation } from '@angular/core';
-import { PLANTOES } from "../mock-plantoes";
+import {PlantoesService} from "./plantoes.service";
+import {Observable} from "rxjs";
+import {Plantao} from "../model/plantao";
+
 
 @Component({
   selector: 'app-plantoes',
@@ -10,19 +13,11 @@ import { PLANTOES } from "../mock-plantoes";
 })
 export class PlantoesComponent implements OnInit {
 
-  plantoes = PLANTOES;
+  plantoes: Observable<Plantao[]>;
+  displayedColumns = ['id','juizId','dataPlantao','tipoPlantao']
 
-<<<<<<< HEAD
-  viewDate: Date = new Date();
-
-
-
-
-=======
->>>>>>> temp
-
-  constructor() {
-
+  constructor(private plantoesService: PlantoesService) {
+    this.plantoes = plantoesService.lista();
   }
 
   ngOnInit(): void {

@@ -1,20 +1,32 @@
-<h2>Plantões</h2>
+<mat-card>
+    <mat-toolbar color="primary">
+      Plantões
+    </mat-toolbar>
+    <table mat-table [dataSource]="plantoes" class="mat-elevation-z8">
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID </th>
+        <td mat-cell *matCellDef="let plantao"> {{plantao.id}} </td>
+      </ng-container>
 
-<div class="table-responsive">
-  <table class="table table-striped table-sm">
-  <thead>
-  <th>ID</th>
-  <th>JuizID</th>
-  <th>Data Plantão</th>
-  <th>Tipo (Local ou Regional)</th>
-  </thead>
-  <tbody>
-  <tr *ngFor="let plantao of plantoes">
-    <td>{{plantao.id}}</td>
-    <td>{{plantao.juizId}}</td>
-    <td>{{plantao.dataPlantao}}</td>
-    <td>{{plantao.tipoPlantao}}</td>
-  </tr>
-  </tbody>
-</table>
+      <!-- Name Column -->
+      <ng-container matColumnDef="juizId">
+        <th mat-header-cell *matHeaderCellDef> JuizId </th>
+        <td mat-cell *matCellDef="let plantao"> {{plantao.juizId}} </td>
+      </ng-container>
 
+      <!-- Antiguidade Column -->
+      <ng-container matColumnDef="dataPlantao">
+        <th mat-header-cell *matHeaderCellDef> data do Plantão </th>
+        <td mat-cell *matCellDef="let plantao"> {{plantao.dataPlantao}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tipoPlantao">
+        <th mat-header-cell *matHeaderCellDef> Tipo </th>
+        <td mat-cell *matCellDef="let plantao"> {{plantao.tipoPlantao}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</mat-card>

@@ -4,28 +4,20 @@ import { RouterModule, Routes } from '@angular/router';
 import {JuizesComponent} from "./juizes/juizes.component";
 import {PortariasComponent} from "./portarias/portarias.component";
 import {PlantoesComponent} from "./plantoes/plantoes.component";
-import {LoginComponent} from "./public/login/login.component";
-import {PublicComponent} from "./public/public.component";
+import {LoginComponent} from "./login/login.component";
+import {AuthGuard} from "./services/auth.guard";
+
 
 const routes: Routes = [
-  {
-    path: '',
-    component: PublicComponent,
-    children:[
-      {path: 'login', component:LoginComponent}
-    ]
-  },
-  {
-    path: 'juizes',
-    component: JuizesComponent
-  },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+  {path: 'juizes', component: JuizesComponent, canActivate: [AuthGuard]},
   {
     path: 'portarias',
-    component: PortariasComponent
+    component: PortariasComponent, canActivate: [AuthGuard]
   },
   {
     path: 'plantoes',
-    component: PlantoesComponent
+    component: PlantoesComponent, canActivate: [AuthGuard]
   },
   {
     path: 'login',
